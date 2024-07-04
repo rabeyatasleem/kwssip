@@ -50,19 +50,25 @@
         android:layout_marginTop="60dp"
         app:layout_constraintWidth_percent="0.9">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_outline"/>
+            android:background="@drawable/rounded_outline"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_outline"/>
+            android:background="@drawable/rounded_outline"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"/>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -77,26 +83,32 @@
         android:layout_marginTop="180dp"
         app:layout_constraintWidth_percent="0.9">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView3"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_outline"/>
+            android:background="@drawable/rounded_outline"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_outline"/>
+            android:background="@drawable/rounded_outline"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView5"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_outline"/>
+            android:background="@drawable/rounded_outline"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"/>
     </LinearLayout>
 
     <LinearLayout
@@ -112,6 +124,7 @@
         app:layout_constraintWidth_percent="0.9">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
             android:layout_width="31dp"
             android:layout_height="31dp"
             android:layout_margin="15dp"
@@ -130,6 +143,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="31dp"
             android:layout_height="31dp"
             android:layout_margin="15dp"
@@ -148,6 +162,7 @@
         </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
                 android:layout_width="31dp"
                 android:layout_height="31dp"
                 android:layout_margin="15dp"
@@ -168,6 +183,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
                 android:layout_width="31dp"
                 android:layout_height="31dp"
                 android:layout_margin="15dp"
@@ -186,6 +202,7 @@
             </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
             android:layout_width="31dp"
             android:layout_height="31dp"
             android:layout_margin="15dp"
@@ -216,7 +233,8 @@
         android:textAlignment="center"
         android:textColorHint="@color/white"
         android:textSize="16sp"
-        app:backgroundTint="@color/teal"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
