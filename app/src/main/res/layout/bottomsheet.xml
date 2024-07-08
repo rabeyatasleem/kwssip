@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/bottomsheet"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView1"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHeight_percent="0.2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.041"-->
+<!--        app:layout_constraintWidth_percent="0.2"-->
+<!--        app:srcCompat="@drawable/blue_logo" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/kwssip_logo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="116dp"-->
+<!--        android:fontFamily="@font/inter_bold"-->
+<!--        android:text="@string/kwssip"-->
+<!--        android:textColor="@color/blue"-->
+<!--        android:textSize="38sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView1" />-->
 
     <FrameLayout
         android:id="@+id/sheet"
@@ -17,71 +45,180 @@
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.999">
 
-        <!--        <ImageView-->
-        <!--            android:layout_width="60dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center|top"-->
-        <!--            android:background="@drawable/line"-->
-        <!--            android:scaleType="centerCrop" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/rating_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="48dp"
-            android:fontFamily="@font/leaguespartan_semibold"
-            android:text="@string/give_ahmed_a_rating"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kwssip_logo" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center|top"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearLayout2"
-            android:layout_marginTop="130dp">
-            
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/emoji_1"
-                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:text="@string/give_ahmed_a_rating"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/emoji_2"
-                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rating_text">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/emoji_3"
-                android:layout_margin="10dp"/>
+                <ImageView
+                    android:id="@+id/emoji_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/emoji_1" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/emoji_4"
-                android:layout_margin="10dp"/>
+                <ImageView
+                    android:id="@+id/emoji_2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/emoji_2" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/emoji_5"
-                android:layout_margin="10dp"/>
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/emoji_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/emoji_3" />
+
+                <ImageView
+                    android:id="@+id/emoji_4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/emoji_4" />
+
+                <ImageView
+                    android:id="@+id/emoji_5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/emoji_5"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="90dp"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:text="@string/leave_a_comment"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+<!--            <EditText-->
+<!--                android:id="@+id/feedbackEditText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="90dp"-->
+<!--                android:background="@drawable/rounded_edittext"-->
+<!--                android:hint="@string/write_your_feedback"-->
+<!--                android:minHeight="130dp"-->
+<!--                android:padding="16dp"-->
+<!--                android:fontFamily="@font/leaguespartan_regular"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:textColorHint="#D3D3D3"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/feedbackTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment_text"
+                app:layout_constraintWidth_percent="0.9"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/blue"
+                android:layout_marginTop="20dp"
+                app:boxStrokeWidth="1dp"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/grey">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feedbackEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="@string/write_your_feedback"
+                    android:inputType="textMultiLine"
+                    android:minHeight="130dp"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:gravity="top"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/leaguespartan_regular"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/required_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="90dp"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:text="@string/required"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedbackTextInputLayout"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/feedback_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:gravity="center"
+                android:hint="@string/upload"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/teal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/required_text"
+                app:layout_constraintVertical_bias="0.112"
+                app:layout_constraintWidth_percent="0.4"
+                app:strokeColor="@color/teal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
 

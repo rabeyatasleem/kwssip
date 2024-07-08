@@ -55,4 +55,8 @@
     <string name="upload_pictures">Upload Pictures</string>
     <string name="clear_pictures">Clear Pictures</string>
     <string name="give_ahmed_a_rating">Give Ahmed a rating!*</string>
+    <string name="leave_a_comment">Leave a comment*</string>
+    <string name="write_your_feedback">Write Your Feedback</string>
+    <string name="required">*required</string>
+    <string name="upload">Upload</string>
 </resources>
